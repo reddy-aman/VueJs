@@ -8,7 +8,7 @@ click event using v-on directive and we can use @ also :
 
 <button class="button" v-on:click="cart += 1">Add to Cart</button>
 // in this case we are telling v-on to listen click event.
-// inside quotes we place the login simply we want to increement
+// inside quotes we place the logic simply we want to increement
 the value when button clicked.
 
 Triggering using a method
