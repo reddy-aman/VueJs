@@ -17,10 +17,11 @@ const ProductInfo = Vue.createApp({
     },
     methods:{
         addToCart(){
+            //click event for button
             this.cart += 1  // Event Handling using function 
         },
         updateImage(variantImage) {
-    this.image = variantImage
+    this.image = variantImage //mouseover event for change image color
   }
     }
 })
