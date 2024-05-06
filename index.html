@@ -12,6 +12,7 @@
   <body>
      <div id="app">
       <div class="nav-bar"></div>
+       <div class="cart">Cart({{ cart }})</div>
       <div class="product-display">
         <div class="product-container">
           <div class="product-image">
@@ -28,13 +29,12 @@
       <!-- <h6 class="text-success" v-show="inStock">InStock</h6> -->
       <h5 class="text-danger">{{ About }}</h5>
     <ul>
-      <li v-for="disc in disc">{{disc}}</li>
+      <li v-for="disc in disc">{{disc}}</li> 
+       <a v-bind:href="url">Read More</a>
     </ul>
-      <a v-bind:href="url">Read More</a>
-            <!-- solution -->
-            
-           <!-- solution -->
-          </div>
+    <div v-for="variant in variants" :key="variant.id" @mouseover="updateImage(variant.image)">{{ variant.color }}</div>
+        <button class="btn btn-success" v-on:click="addToCart">Add to Cart</button>
+      </div>
         </div>
       </div>
     </div>

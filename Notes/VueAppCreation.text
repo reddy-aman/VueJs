@@ -1,0 +1,47 @@
+Creating the Vue App
+1.index.html
+Now we just need to make sure we’re importing our Vue app into the index.html
+
+<!-- Import App -->
+<script src="./main.js"></script>
+
+Mounting Our App
+
+Now that we’ve created our app, 
+we need to mount the app that we just created, into our DOM. 
+We’ll do that inside of a script tag, in our index.html file.
+
+<!-- Mount App -->
+<script>
+  const mountedApp = app.mount('#app')
+</script>
+
+Displaying the Data
+
+<div id="app">
+  <h1>{{ product }}</h1>
+</div>
+
+2. main.js
+
+To display our data within our HTML, we’ll first have to create 
+a Vue app. In our main.js file, we’ll create our app with:
+
+const app = Vue.createApp({
+    data() {
+        return {
+            product: 'Socks'
+        }
+    }
+})
+
+Exaplain :
+
+As an argument, we’re going to pass in an object 
+and add a data property. This is going to be a function that returns another object
+where we’ll store our data. In here, we’ll add product as a data item.
+
+
+
+
+
