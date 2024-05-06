@@ -1,0 +1,27 @@
+Our Goal
+
+We want to display different HTML elements based upon a condition. 
+We’ll display a p tag that says “in stock” when our product is in stock, 
+or one that says “out of stock” when it’s not.
+
+first case : To render or not to render
+
+index.html
+
+<p v-if="inStock">In Stock</p> //checking condition using v-if directiv.
+<p v-else>Out of Stock</p> 
+<p v-show="inStock">In Stock</p> // v-show directiv use for visibility of the elements
+this condition hide else part.
+
+main.js
+
+const app = Vue.createApp({
+    data() {
+        return {
+            product: 'Socks',
+            image: './assets/images/socks_blue.jpg',
+            inStock: true // new data property //
+        }
+    }
+})
+

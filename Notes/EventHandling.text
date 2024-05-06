@@ -1,0 +1,36 @@
+Event Handling
+
+you’ll see that we now have an Add to Cart button, along with a cart div, which includes an expression to print out the value of our new cart data.
+
+index.html 
+
+click event using v-on directive and we can use @ also :
+
+<button class="button" v-on:click="cart += 1">Add to Cart</button>
+// in this case we are telling v-on to listen click event.
+// inside quotes we place the login simply we want to increement
+the value when button clicked.
+
+Triggering using a method
+
+<button class="button" v-on:click="addToCart">Add to Cart</button>
+
+// In this Case we create a addToCart Method for click event.
+// when we click on button addToCart method use to trigger click event.
+
+main.js
+
+const app = Vue.createApp({
+  data() {
+    return {
+      cart: 0,
+      ...
+    }
+  },
+  methods: {
+    addToCart() {
+      this.cart += 1
+    }
+  }
+})
+

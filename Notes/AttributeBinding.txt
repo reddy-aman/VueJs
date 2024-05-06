@@ -1,0 +1,30 @@
+Introducing Attribute Binding
+
+To create a bond between an HTML element’s attribute and a value from your Vue app’s data, 
+we’ll use a Vue directive called v-bind.
+
+Our Goal
+In the starting code, we have a new div with the class of product-image.
+
+index.html
+
+<div class="product-image">
+  <img v-bind:src="image"> // here we pass our data members i.e image
+</div>
+
+
+Adding an image to our data
+
+main.js
+
+const app = Vue.createApp({
+    data() {
+        return {
+            product: 'Socks',
+            image: './assets/images/socks_green.jpg'
+        }
+    }
+}) 
+
+
+

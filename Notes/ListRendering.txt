@@ -1,0 +1,26 @@
+Our Goal
+
+Render HTML lists from an array in our data.
+
+Looping through data arrays : we now have an array of details
+
+main.js
+
+const app = Vue.createApp({
+    data() {
+        return {
+            ...
+            details: ['50% cotton', '30% wool', '20% polyester']
+        }
+    }
+})
+
+index.html
+
+<ul>
+  <li v-for="detail in details">{{ detail }}</li>
+  // v-for directiv use for looping array elements.
+  // Here, details refers to the details array in our data, 
+  and detail is the alias for the current element from that array.
+</ul>
+
